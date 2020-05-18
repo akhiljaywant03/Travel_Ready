@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context="com.amazonaws.youruserpools.ManualRegister"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="7dp"
+        android:text="Enter the ID number below"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:paddingTop="21dp"
+        android:textColor="#000000"
+        android:background="#e9d2f3"
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/rfidNo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="7dp"
+        android:background="#f3ecf6">
+
+    </EditText>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:layout_margin="7dp"
+        >
+
+        <Button
+            android:id="@+id/manualregister"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:text="Register the card"
+            android:textSize="20sp"
+            android:textColor="#2f0740"
+            android:background="#deadf2"
+            android:layout_margin="10dp">
+        </Button>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+{
+    "sih": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-onestopshopmaster-sih-213126-authRole",
+            "UnauthRoleArn": "arn:aws:iam::984182838325:role/amplify-onestopshopmaster-sih-213126-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::984182838325:role/amplify-onestopshopmaster-sih-213126-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-onestopshopmaster-sih-213126-deployment",
+            "UnauthRoleName": "amplify-onestopshopmaster-sih-213126-unauthRole",
+            "StackName": "amplify-onestopshopmaster-sih-213126",
+            "StackId": "arn:aws:cloudformation:us-east-2:984182838325:stack/amplify-onestopshopmaster-sih-213126/af4ae800-9857-11ea-8ab6-02c25da8714e",
+            "AmplifyAppId": "d1g9txji7hs0xs"
+        }
+    }
+}

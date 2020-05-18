@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+        <TextView
+            android:id="@+id/confirm_toolbar_title"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="@string/Menu"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/action_bar_text" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textViewConfirmTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Confirm your account"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/textViewConfirmSubtext_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="A confirmation code was sent."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/activity_text_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewConfirmTitle" />
+
+    <TextView
+        android:id="@+id/textViewConfirmSubtext_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Please enter the code to confirm account."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/activity_text_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewConfirmSubtext_1" />
+
+    <TextView
+        android:id="@+id/textViewConfirmUserIdLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/activity_text_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewConfirmSubtext_2" />
+
+    <EditText
+        android:id="@+id/editTextConfirmUserId"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_txt_username"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:paddingLeft="60dp"
+        android:paddingRight="@dimen/activity_text_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewConfirmUserIdLabel" />
+
+    <TextView
+        android:id="@+id/textViewConfirmUserIdMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/alert"
+        android:textSize="@dimen/activity_text_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextConfirmUserId" />
+
+    <TextView
+        android:id="@+id/textViewConfirmCodeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/activity_text_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewConfirmUserIdMessage" />
+
+    <EditText
+        android:id="@+id/editTextConfirmCode"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_txt_password"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="Confirmation code"
+        android:inputType="number"
+        android:paddingLeft="60dp"
+        android:paddingRight="@dimen/activity_text_padding"
+        android:textColor="@color/colorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewConfirmCodeLabel" />
+
+    <TextView
+        android:id="@+id/textViewConfirmCodeMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/activity_text_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextConfirmCode" />
+
+    <TextView
+        android:id="@+id/resend_confirm_req"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Resend code"
+        android:textAllCaps="false"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/button_default"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewConfirmCodeMessage" />
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_btn_login"
+        android:onClick="logIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+       app:layout_constraintTop_toBottomOf="@id/textViewConfirmCodeMessage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

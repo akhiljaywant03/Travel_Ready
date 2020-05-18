@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:orientation="vertical"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:text="Registered Card"
+    android:fontFamily="@font/montserrat_semibold"
+    android:textColor=" #bb7a7a "
+    android:textSize="30dp"
+    android:paddingTop="10dp"
+    android:textAlignment="center"
+    android:background="@color/cardColor"
+    >
+</TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <TextView
+            android:id="@+id/cardDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No cards Found!!!"
+            android:textColor="#4b046a"
+            android:textSize="28dp"
+            android:padding="12dp"
+            android:layout_margin="8dp"
+            android:elevation="100dp"
+            android:shadowColor="#4b046a"
+            android:background="#e5c8f2"
+            >
+
+        </TextView>
+        <Button
+            android:id="@+id/AddCard"
+            android:layout_marginBottom="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:elevation="30dp"
+            android:textColor="#7e0909"
+            android:text="Update/Add Card"
+            android:padding="15dp"
+            android:background="#deadf2">
+
+        </Button>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

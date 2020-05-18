@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amazonaws.youruserpools.CognitoYourUserPoolsDemo">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/cognito"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.amazonaws.youruserpools.MapsActivity"
+            android:label="@string/title_activity_maps">
+
+        </activity>
+
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+
+        <activity
+            android:name="com.amazonaws.youruserpools.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name="com.amazonaws.youruserpools.IntroActivity">
+
+        </activity>
+        <activity android:name="com.amazonaws.youruserpools.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.amazonaws.youruserpools.ChooseMode"
+            android:label="MODE"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="com.amazonaws.youruserpools.Book"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="com.amazonaws.youruserpools.Dashboard"
+            android:label="Dashboard"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.UserActivity"
+            android:label="@string/title_activity_user"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.RegisterUser"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.AboutApp"
+            android:label="@string/title_activity_about_app"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.SignUpConfirm"
+            android:label="@string/title_activity_sign_up_confirm"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.MFAActivity"
+            android:label="@string/title_activity_mfa"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.ForgotPasswordActivity"
+            android:label="@string/title_activity_forgot_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.ChangePasswordActivity"
+            android:label="@string/title_activity_change_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.VerifyActivity"
+            android:label="@string/title_activity_verify"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.AddAttributeActivity"
+            android:label="@string/title_activity_add_attribute"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.DeviceSettings"
+            android:label="@string/title_activity_device_settings"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.NewPassword"
+            android:label="@string/title_activity_new_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.ChooseMFA"
+            android:label="@string/title_activity_choose_mfa"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.ShowBuses"
+            android:label="Available Buses"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.QRCodeScan"
+            android:label="QRcodeScan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.ScannerqrcodeActivity"
+            android:label="QR Code Scanner"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.ManualRegister"
+            android:label="QR Code Picture"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.registerRFID"
+            android:label="register rfid"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

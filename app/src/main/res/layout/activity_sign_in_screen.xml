@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.amazonaws.youruserpools.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="One Stop Shop"
+        android:textColor="@color/colorText"
+        android:textSize="96px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="277dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <EditText
+        android:id="@+id/editTextUserId"
+        android:layout_width="342dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_txt_username"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="Username"
+        android:paddingLeft="60dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorText"
+        android:textSize="40px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserIdLabel"
+        tools:layout_editor_absoluteY="406dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="910px"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_txt_password"
+        android:fontFamily="@font/montserrat_semibold"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="60dp"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/activity_text_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserPasswordLabel" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:fontFamily="@font/montserrat_light"
+        android:onClick="forgotPassword"
+        android:text="Forgot your password?"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorText"
+        android:textSize="32px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <Button
+        android:id="@+id/LogIn"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_btn_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:onClick="map"
+        android:text="Sign in"
+        android:textColor="@color/colorText"
+        android:textSize="48px"
+        app:layout_constraintEnd_toStartOf="@+id/LogIn"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textViewUserSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/montserrat_light"
+        android:onClick="signUp"
+        android:text="Don't you have an account? Create"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUserPasswordMessage"
+        app:layout_constraintVertical_bias="0.819" />
+
+    <TextView
+        android:id="@+id/textViewUserIdLabel"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/colorText"
+        android:layout_width="910px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/activity_text_size_small"/>
+
+    <TextView
+        android:id="@+id/textViewUserIdMessage"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/colorText"
+        android:layout_width="910px"
+        android:layout_height="wrap_content"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        app:layout_constraintTop_toBottomOf="@id/editTextUserId"
+        tools:layout_editor_absoluteY="469dp" />
+
+    <TextView
+        android:id="@+id/textViewUserPasswordLabel"
+        android:layout_width="910px"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/colorText"
+        android:layout_height="wrap_content"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserIdMessage"
+        tools:layout_editor_absoluteY="486dp"
+        android:textSize="@dimen/activity_text_size_small"/>
+
+    <TextView
+        android:id="@+id/textViewUserPasswordMessage"
+        android:layout_width="500px"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/colorText"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text=" "
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

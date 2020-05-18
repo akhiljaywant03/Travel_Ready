@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ac_bbus"
+        android:layout_weight="1"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background=" #cac8c8 "
+        android:layout_marginLeft="05dp"
+        android:layout_marginRight="05dp"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        >
+
+        <Button
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:textAlignment="center"
+            android:layout_margin="10dp"
+            android:id="@+id/buttonPositon"
+            android:hint="Card Details"
+            android:background="@color/button_pressed"
+            >
+
+        </Button>
+
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            android:id="@+id/viewPosition"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/buttonPositon"
+            android:hint="Balance"
+            android:background="@android:color/holo_green_dark"
+            >
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>
+
