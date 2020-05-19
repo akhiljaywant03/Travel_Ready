@@ -157,7 +157,8 @@
                     android:layout_width="101dp"
                     android:layout_height="104dp"
                     android:layout_gravity="center_horizontal"
-                    android:background="@drawable/charge" />
+                    android:background="@drawable/charge"
+                    android:onClick="recharge"/>
 
                 <TextView
                     android:layout_width="wrap_content"

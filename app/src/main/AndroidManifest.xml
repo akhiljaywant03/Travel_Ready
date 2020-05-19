@@ -73,6 +73,11 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+        <activity android:name="com.amazonaws.youruserpools.Payment"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+
         <activity
             android:name="com.amazonaws.youruserpools.Dashboard"
             android:label="Dashboard"

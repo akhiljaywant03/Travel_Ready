@@ -30,6 +30,10 @@ public class Dashboard extends AppCompatActivity {
         Intent intent = new Intent(this, ChooseMode.class);
         startActivityForResult(intent, 11);
     }
+    public void recharge(View view){
+        Intent intent=new Intent(this,Payment.class);
+        startActivity(intent);
+    }
 
 
 }
