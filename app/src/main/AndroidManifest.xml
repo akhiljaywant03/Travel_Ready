@@ -90,10 +90,6 @@
             android:name="com.amazonaws.youruserpools.RegisterUser"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.amazonaws.youruserpools.AboutApp"
-            android:label="@string/title_activity_about_app"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name="com.amazonaws.youruserpools.SignUpConfirm"
             android:label="@string/title_activity_sign_up_confirm"
             android:theme="@style/AppTheme.NoActionBar" />

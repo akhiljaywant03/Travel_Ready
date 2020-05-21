@@ -4,21 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.amazonaws.youruserpools.QRCodeScan"
-    tools:showIn="@layout/activity_qr_code">
+    >
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
+        android:layout_width="392dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_margin="10dp"
-        >
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
         <Button
             android:id="@+id/buttonTakePicture"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add Card ID manually" />
+
         <Button
             android:id="@+id/buttonScanBarcode"
             android:layout_width="match_parent"
@@ -26,10 +31,6 @@
             android:layout_marginTop="10dp"
             android:text="Scan QR Code" />
 
-        <TextView
-            android:textSize="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+
     </LinearLayout>
 </RelativeLayout>
