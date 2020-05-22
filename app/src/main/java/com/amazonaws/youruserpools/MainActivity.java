@@ -30,7 +30,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
-import com.amazonaws.mobile.config.AWSConfiguration;
 import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient;
 import com.google.android.material.navigation.NavigationView;
 import android.text.Editable;
@@ -38,7 +37,6 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -278,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void book(View view)
     {
-        Intent intent=new Intent(this,Book.class);
+        Intent intent=new Intent(this, BusBook.class);
         startActivityForResult(intent,14);
     }
 

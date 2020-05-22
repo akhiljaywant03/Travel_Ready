@@ -1,6 +1,5 @@
 package com.amazonaws.youruserpools;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -58,7 +57,7 @@ public class ChooseMode extends AppCompatActivity implements Adapter.OnItemClick
 
 
     public void book(View view){
-        Intent intent=new Intent(this,Book.class);
+        Intent intent=new Intent(this, BusBook.class);
         startActivityForResult(intent,16);
     }
 
