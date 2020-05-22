@@ -107,7 +107,7 @@
         android:layout_marginStart="236dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/montserrat_semibold"
-        android:onClick="map"
+        android:onClick="test"
         android:text="Sign in"
         android:textColor="@color/colorText"
         android:textSize="48px"

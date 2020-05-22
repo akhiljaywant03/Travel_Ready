@@ -285,6 +285,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void test(View view){
+        Intent intent=new Intent(this,QRCodeScan.class);
+        startActivity(intent);
+    }
+
 
 
     // Login if a user is already present
@@ -329,11 +334,7 @@ public class MainActivity extends AppCompatActivity {
                 // User has forgotten the password, start the process to set a new password
                 forgotpasswordUser();
                 break;
-            case R.id.nav_about:
-                // For the inquisitive
-                Intent aboutAppActivity = new Intent(this, AboutApp.class);
-                startActivity(aboutAppActivity);
-                break;
+
 
         }
     }

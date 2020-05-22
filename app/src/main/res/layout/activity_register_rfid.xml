@@ -25,35 +25,37 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
         android:layout_height="0dp"
         android:layout_weight="10">
 
-        <TextView
-            android:id="@+id/cardDetails"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No cards Found!!!"
-            android:textColor="#4b046a"
-            android:textSize="28dp"
-            android:padding="12dp"
-            android:layout_margin="8dp"
-            android:elevation="100dp"
-            android:shadowColor="#4b046a"
-            android:background="#e5c8f2"
-            >
-
-        </TextView>
         <Button
             android:id="@+id/AddCard"
-            android:layout_marginBottom="25dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="73dp"
+            android:background="@drawable/btn_mode"
             android:elevation="30dp"
-            android:textColor="#7e0909"
-            android:text="Update/Add Card"
+            android:fontFamily="@font/montserrat_bold"
             android:padding="15dp"
-            android:background="#deadf2">
+            android:text="Update/Add Card"
+            android:textColor="@color/grey_700">
 
         </Button>
+
+        <TextView
+            android:id="@+id/cardDetails"
+            android:layout_width="370dp"
+            android:layout_height="53dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="19dp"
+            android:background="@drawable/rounded_text_field"
+            android:fontFamily="@font/montserrat_semibold"
+            android:paddingLeft="20dp"
+            android:hint="No cards Found!!!"
+            android:textSize="30dp" />
 
     </RelativeLayout>
 

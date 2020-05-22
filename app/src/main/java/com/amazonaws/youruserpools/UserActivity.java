@@ -207,11 +207,7 @@ public class UserActivity extends AppCompatActivity {
             case R.id.nav_user_trusted_devices:
                 showTrustedDevices();
                 break;
-            case R.id.nav_user_about:
-                // For the inquisitive
-                Intent aboutAppActivity = new Intent(this, AboutApp.class);
-                startActivity(aboutAppActivity);
-                break;
+
         }
     }
 
