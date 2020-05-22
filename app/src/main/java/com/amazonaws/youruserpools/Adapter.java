@@ -2,7 +2,6 @@ package com.amazonaws.youruserpools;
 
 import android.content.Context;
 import android.content.Intent;
-import android.icu.text.Transliterator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +54,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.myViewHolder> {
                         intent=new Intent(mContext,Dashboard.class);
                         break;
                     case 1:
-                        intent=new Intent(mContext,Book.class);
+                        intent=new Intent(mContext, BusBook.class);
                         break;
                     case 2:
                         intent=new Intent(mContext,Dashboard.class);

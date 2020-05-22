@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/One-Stop-Shop.iml" filepath="$PROJECT_DIR$/One-Stop-Shop.iml" group="One-Stop-Shop" />
-      <module fileurl="file://$PROJECT_DIR$/app/One-Stop-Shop-app.iml" filepath="$PROJECT_DIR$/app/One-Stop-Shop-app.iml" group="One-Stop-Shop/app" />
       <module fileurl="file://$PROJECT_DIR$/SIH_APP.iml" filepath="$PROJECT_DIR$/SIH_APP.iml" group="SIH_APP" />
+      <module fileurl="file://$PROJECT_DIR$/StopShop.iml" filepath="$PROJECT_DIR$/StopShop.iml" group="StopShop" />
+      <module fileurl="file://$PROJECT_DIR$/app/StopShop-app.iml" filepath="$PROJECT_DIR$/app/StopShop-app.iml" group="StopShop/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="One-Stop-Shop/app" />
       <module fileurl="file://$PROJECT_DIR$/aws-sdk-android-samples-master-SIH_APP.iml" filepath="$PROJECT_DIR$/aws-sdk-android-samples-master-SIH_APP.iml" group="SIH_APP" />
     </modules>
