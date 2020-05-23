@@ -72,4 +72,8 @@ public class BusListAdapter extends  RecyclerView.Adapter<BusListAdapter.ViewHol
         void onBusClick(int position);
     }
 
+
 }
+
+
+

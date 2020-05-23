@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 public class BusList implements  Parcelable{
 
-    // @PrimaryKey(autoGenerate = true)
+
 
     //@ColumnInfo(name = "title")
     private String Bus;
@@ -24,7 +24,7 @@ public class BusList implements  Parcelable{
         this.fare = fare;
     }
 
-    // @Ignore
+
     public BusList() {
 
     }
