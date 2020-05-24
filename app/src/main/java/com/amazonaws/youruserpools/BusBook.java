@@ -19,19 +19,22 @@ import com.amazonaws.mobileconnectors.dynamodbv2.document.datatype.Document;
 import com.amazonaws.youruserpools.CognitoYourUserPoolsDemo.R;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class BusBook extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
-    BusList BusDetails = new BusList();
 
+    ArrayList<BusList> mBuses =new ArrayList<>();
+    ArrayList<BusList> mBusesTemp =new ArrayList<>();
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("TAG", "initialstate: "+ mBuses);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_ticket);
         Button button = (Button) findViewById(R.id.button);
@@ -59,25 +62,15 @@ public class BusBook extends AppCompatActivity implements DatePickerDialog.OnDat
                 String to = endLocation.getText().toString();
 
                 GetAllItemsAsyncTask getAllDevicesTask = new GetAllItemsAsyncTask(from ,to);
-                getAllDevicesTask.execute();
 
                 try {
 
-                    Log.i("TAG", "insertBuses3: "+ BusDetails.getBus());
-                    Document documents = new GetAllItemsAsyncTask(from ,to).execute().get();
 
-                    String fare = documents.get("fare").convertToAttributeValue().getN();
-                    String busID= documents.get("vehicle_id").convertToAttributeValue().getS();
+                    mBuses =  getAllDevicesTask.execute().get();
 
-                    BusDetails.setFare(fare);
-                    BusDetails.setBus(busID);
-                    BusDetails.setCrowd("65");
-
-
-
-                    Log.i("TAG", "insertBuses4: "+ BusDetails.getBus());
+                    Log.i("TAG", "insertBuses4: "+ mBuses);
                     Intent intent = new Intent(view.getContext(), ShowBuses.class);
-                    intent.putExtra("busList", BusDetails);
+                    intent.putParcelableArrayListExtra("busList", mBuses);
                     view.getContext().startActivity(intent);
 
 
@@ -96,27 +89,55 @@ public class BusBook extends AppCompatActivity implements DatePickerDialog.OnDat
 
 
 
-    private class GetAllItemsAsyncTask extends AsyncTask<String, Void, Document> {
+    private class GetAllItemsAsyncTask extends AsyncTask<String, Void, ArrayList<BusList>> {
 
         private String from;
         private String to;
 
+
         public GetAllItemsAsyncTask(String from, String to){
             this.from=from;
             this.to=to;
+
         }
 
         @Override
-        protected Document doInBackground(String... params) {
+        protected ArrayList<BusList> doInBackground(String... params) {
+
+            Log.d("doInBackcount","count");
 
             BusListDatabaseAccess databaseAccess = BusListDatabaseAccess.getInstance(BusBook.this);
-            Log.d("Data recieved", "databases content"+databaseAccess.getItem(from,to).toString());
+            Log.d("Data recieved", "databases content"+databaseAccess.getItem_from_PJ(from,to).toString());
 
-            return databaseAccess.getItem(from,to);
+            Document DataRecieved_PJ=databaseAccess.getItem_from_PJ(from,to);
+
+            String fare = DataRecieved_PJ.get("fare").convertToAttributeValue().getN();
+            List<String> busIDs= DataRecieved_PJ.get("vehicle_ID").convertToAttributeValue().getSS();
+
+
+            for(String busID : busIDs){
+
+                BusList BusDetails = new BusList();
+
+                Document DataRecieved_V=databaseAccess.getItem_from_V(busID);
+                String crowd= DataRecieved_V.get("Count_of_Travellers").convertToAttributeValue().getS();
+
+                BusDetails.setFare(fare);
+                BusDetails.setBus(busID);
+                BusDetails.setCrowd(crowd);
+
+                mBuses.add(BusDetails);
+
+            }
+
+            Log.d("Data recieved2", "initialstate2"+mBuses);
+
+            Log.d("Data recieved2", "initialstate3"+mBuses);
+            return mBuses;
         }
 
         @Override
-        protected void onPostExecute(Document documents) {
+        protected void onPostExecute(ArrayList<BusList> documents) {
 
         }
 

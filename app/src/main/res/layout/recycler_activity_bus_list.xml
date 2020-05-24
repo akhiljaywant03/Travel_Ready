@@ -2,7 +2,7 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
@@ -21,14 +21,14 @@
     <TextView
         android:id="@+id/buses"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_weight="50"
         android:textSize="20dp"
         android:lines="1"
         android:text="Bus No./Name"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:fontFamily="@font/montserrat_semibold"
+        android:fontFamily="@font/ibm_semibold"
         android:padding="10dp"
         android:background=" #8bacc6 "
         />
@@ -36,13 +36,13 @@
     <TextView
         android:id="@+id/crowd"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_weight="24"
         android:textSize="20dp"
         android:text="Crowd"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:fontFamily="@font/montserrat_bold"
+        android:fontFamily="@font/ibm_semibold"
         android:padding="10dp"
         android:background=" #8bacc6 "
         />
@@ -51,13 +51,13 @@
     <TextView
         android:id="@+id/fare"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_weight="24"
         android:textSize="20dp"
         android:text="Fare"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:fontFamily="@font/montserrat_semibold"
+        android:fontFamily="@font/ibm_semibold"
         android:padding="10dp"
         android:background=" #8bacc6 "
         />

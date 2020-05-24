@@ -12,10 +12,11 @@
         android:layout_width="350dp"
         android:layout_height="325dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="148dp"
         android:layout_marginEnd="10dp"
-        android:src="@drawable/travel_1"
+        android:src="@drawable/grp7"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

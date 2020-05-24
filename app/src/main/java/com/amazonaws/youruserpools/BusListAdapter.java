@@ -1,5 +1,6 @@
 package com.amazonaws.youruserpools;
 
+import android.content.res.AssetManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.amazonaws.youruserpools.CognitoYourUserPoolsDemo.R;
 
 import java.util.ArrayList;
+
+import static java.security.AccessController.getContext;
 
 public class BusListAdapter extends  RecyclerView.Adapter<BusListAdapter.ViewHolder>{
 

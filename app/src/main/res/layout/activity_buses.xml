@@ -51,7 +51,7 @@
             android:text="Bus No./Name"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:fontFamily="@font/montserrat_semibold"
+            android:fontFamily="@font/ibm_semibold"
             android:padding="10dp"
             android:background="#2ca3f1 "
             />
@@ -65,7 +65,7 @@
             android:text="Crowd"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:fontFamily="@font/montserrat_semibold"
+            android:fontFamily="@font/ibm_semibold"
             android:padding="10dp"
             android:background="#2ca3f1 "
             />
@@ -80,7 +80,7 @@
             android:text="Fare"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:fontFamily="@font/montserrat_semibold"
+            android:fontFamily="@font/ibm_semibold"
             android:padding="10dp"
             android:background="#2ca3f1 "
             />
@@ -99,85 +99,60 @@
     //**************************************
 
 
+
+
+
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="96dp"
+        android:layout_height="0dp"
         android:layout_weight="7"
         android:orientation="vertical"
+        android:id="@+id/recyclerView"
         android:padding="5dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
 
         >
-        <!--
 
         <Button
-            android:id="@+id/buttonPositon"
             android:layout_width="125dp"
             android:layout_height="45dp"
-            android:layout_margin="7dp"
-            android:layout_marginStart="72dp"
-            android:background="@color/button_pressed"
-            android:hint="Card Details"
             android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_margin="7dp"
+            android:id="@+id/buttonPositon"
+            android:hint="Card Details"
+            android:background="@color/button_pressed"
+            >
 
         </Button>
 
         <TextView
-            android:id="@+id/viewPosition"
             android:layout_width="125dp"
             android:layout_height="45dp"
-            android:layout_below="@+id/buttonPositon"
-            android:layout_margin="7dp"
-            android:layout_marginEnd="36dp"
-            android:background="@android:color/holo_green_dark"
-            android:hint="Balance"
-            android:paddingTop="10dp"
             android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/buttonPositon"
-            app:layout_constraintTop_toTopOf="parent">
+            android:paddingTop="10dp"
+            android:id="@+id/viewPosition"
+            android:layout_margin="7dp"
+            android:layout_below="@+id/buttonPositon"
+            android:hint="Balance"
+            android:background="@android:color/holo_green_dark"
+            >
 
         </TextView>
--->
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="132dp"
-            android:layout_height="51dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="28dp"
-            android:background="@drawable/btn"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Bus Location"
-            android:textColor="@color/grey_700"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="132dp"
-            android:layout_height="51dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="56dp"
-            android:background="@drawable/btn"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Balance"
-            android:textColor="@color/grey_700"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+
+
+
 
 
 </LinearLayout>
