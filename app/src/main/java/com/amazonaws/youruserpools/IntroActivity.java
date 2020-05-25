@@ -49,9 +49,9 @@ public class IntroActivity extends AppCompatActivity {
 
         //Data
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Plan Your Trip", "Choose your destination, plan your trip.\nPick the best place to your holiday", R.drawable.grp12));
-        mList.add(new ScreenItem("Select the Date", "Select the day, book your ticket. We give\nthe best price for you", R.drawable.grp11));
-        mList.add(new ScreenItem("Enjoy Your Trip", "Enjoy your holiday! Take a photo, share to\nthe world and tag me", R.drawable.grp8));
+        mList.add(new ScreenItem("Plan Your Trip", "Choose your destination, plan your trip.\nSmooth travel to destiation", R.drawable.grp12));
+        mList.add(new ScreenItem("Select the Date", "Select the day, book your ticket. Real time\nnumbers including crowd count", R.drawable.grp11));
+        mList.add(new ScreenItem("Enjoy Your Trip", "Say No to waiting queues\nA one stop shop platform", R.drawable.grp8));
 
         //Setup viewPager
         screenPager = findViewById(R.id.screen_viewpager);

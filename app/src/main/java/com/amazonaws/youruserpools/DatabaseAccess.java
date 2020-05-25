@@ -14,36 +14,44 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 
 import java.util.List;
 
-public class BusListDatabaseAccess {
+public class DatabaseAccess {
     private static final String COGNITO_POOL_ID = "ap-south-1:5806a377-205c-45fd-90f7-0d10f8177b1f";
     private static final Regions MY_REGION = Regions.AP_SOUTH_1;
     private AmazonDynamoDBClient dbClient;
     private Table dbTable_PJ;
     private Table dbTable_Vehicle;
+    private Table dbTable_rfid_details;
+
     private Context context;
     private final String DDB_PJ = "PLAN__JOURNEY";
     private final String DDB_V = "VEHICLE";
+    private final String DDB_R = "RFID_BALANCE_TABLE";
+
     CognitoCachingCredentialsProvider credentialsProvider;
 
 
 
-    private static volatile BusListDatabaseAccess instance;
-    private BusListDatabaseAccess (Context context) {
+    private static volatile DatabaseAccess instance;
+    private DatabaseAccess(Context context) {
         this.context =context;
         credentialsProvider = new CognitoCachingCredentialsProvider (context, COGNITO_POOL_ID, MY_REGION);
         dbClient = new AmazonDynamoDBClient(credentialsProvider);
         dbClient.setRegion(Region.getRegion(Regions.AP_SOUTH_1));
         dbTable_PJ = Table.loadTable(dbClient, DDB_PJ);
         dbTable_Vehicle = Table.loadTable(dbClient, DDB_V);
+        dbTable_rfid_details=Table.loadTable(dbClient,DDB_R);
 
 
     }
-    public static synchronized BusListDatabaseAccess getInstance   (Context context) {
+    public static synchronized DatabaseAccess getInstance   (Context context) {
         if (instance == null) {
-            instance = new BusListDatabaseAccess(context);
+            instance = new DatabaseAccess(context);
         }
         return instance;
     }
+
+    //*****************************************************DDB_PJ
+
 
     public Document getItem_from_PJ(String source, String destination){
         //String hashKey= credentialsProvider.getCachedIdentityId();
@@ -57,6 +65,9 @@ public class BusListDatabaseAccess {
         return dbTable_PJ.query(new Primitive("source1")).getAllResults();
 
     }
+    //*****************************************************DDB_PJ
+
+    //*****************************************************DDB_V
     public Document getItem_from_V(String VehicleID){
         Document result = dbTable_Vehicle.getItem(new Primitive(VehicleID));
         return result;
@@ -66,5 +77,17 @@ public class BusListDatabaseAccess {
         return dbTable_Vehicle.query(new Primitive("vh01")).getAllResults();
 
     }
+    //*****************************************************DDB_V
+
+    //*****************************************************DDB_R
+    public Document getItem_from_R(String RFID){
+        Document result = dbTable_rfid_details.getItem(new Primitive(RFID));
+        return result;
+    }
+
+    //*****************************************************DDB_R
+
+
+
 
 }

@@ -22,7 +22,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/cognito"
+        android:icon="@drawable/grp7"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -147,6 +147,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.amazonaws.youruserpools.registerRFID"
+            android:label="register rfid"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.amazonaws.youruserpools.rfid_card_details"
             android:label="register rfid"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

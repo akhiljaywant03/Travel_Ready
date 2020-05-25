@@ -4,7 +4,6 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -106,7 +105,7 @@ public class BusBook extends AppCompatActivity implements DatePickerDialog.OnDat
 
             Log.d("doInBackcount","count");
 
-            BusListDatabaseAccess databaseAccess = BusListDatabaseAccess.getInstance(BusBook.this);
+            DatabaseAccess databaseAccess = DatabaseAccess.getInstance(BusBook.this);
             Log.d("Data recieved", "databases content"+databaseAccess.getItem_from_PJ(from,to).toString());
 
             Document DataRecieved_PJ=databaseAccess.getItem_from_PJ(from,to);
