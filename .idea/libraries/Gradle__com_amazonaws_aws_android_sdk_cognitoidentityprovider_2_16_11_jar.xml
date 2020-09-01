@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.16.11@jar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.16.11/dd68122cef447b733af72ed3d84b405557f91a21/aws-android-sdk-cognitoidentityprovider-2.16.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.16.11/dd68122cef447b733af72ed3d84b405557f91a21/aws-android-sdk-cognitoidentityprovider-2.16.11.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.16.11/70aa357c01ac4bb369869f5d9777d08df3ed42e/aws-android-sdk-cognitoidentityprovider-2.16.11-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.16.11/70aa357c01ac4bb369869f5d9777d08df3ed42e/aws-android-sdk-cognitoidentityprovider-2.16.11-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.16.11/819442fd419644092a40b27afe4b245ddaaf8f5f/aws-android-sdk-cognitoidentityprovider-2.16.11-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognitoidentityprovider/2.16.11/819442fd419644092a40b27afe4b245ddaaf8f5f/aws-android-sdk-cognitoidentityprovider-2.16.11-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -44,17 +44,18 @@
         android:layout_weight="2">
 
         <Button
+            android:id="@+id/rechargeCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="30dp"
-            android:text="Recharge Card"
-            android:textSize="20dp"
             android:background="@drawable/btn"
+            android:fontFamily="@font/montserrat_bold"
             android:padding="25dp"
-            android:id="@+id/rechargeCard"
-            >
+            android:text="Recharge"
+            android:textColor="@color/grey_700"
+            android:textSize="20dp">
 
         </Button>
 
