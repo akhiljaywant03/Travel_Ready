@@ -2,7 +2,10 @@ package com.amazonaws.youruserpools;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.amazonaws.youruserpools.CognitoYourUserPoolsDemo.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -33,10 +36,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        arrayList.add(swargate);
-        arrayList.add(shivajiNagar);
-        arrayList.add(bibwewadi);
-        arrayList.add(katraj);
+        Intent intent = getIntent();
+        ArrayList<LatLng> arrayList1 = getIntent().getParcelableArrayListExtra("latsNlons");
+        Log.i("arrayList1", "the lats ans lons are: " +arrayList1);
+
+       // arrayList.add(swargate);
+        //arrayList.add(shivajiNagar);
+        //arrayList.add(bibwewadi);
+        //arrayList.add(katraj);
+        assert arrayList1 != null;
+        arrayList.addAll(arrayList1);
+
+
+        Log.i("arrayList", "the lats ans lons that added: " +arrayList);
+
+
     }
 
 
@@ -55,9 +69,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         for(int i=0;i<arrayList.size();i++)
         {
             mMap.addMarker(new MarkerOptions().position(arrayList.get(i)).title("Marker").icon(BitmapDescriptorFactory.fromResource(R.drawable.bbus3)));
-
+            Log.i("location", "onMapReady: " +arrayList.get(i));
         }
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(18.4529,73.8652), 12.0f));
+       mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(arrayList.get(0), 12.0f));
 
         // Add a marker in Sydney and move the camera
         //LatLng sydney = new LatLng(-34, 151);

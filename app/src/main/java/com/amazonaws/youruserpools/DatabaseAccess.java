@@ -15,17 +15,19 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import java.util.List;
 
 public class DatabaseAccess {
-    private static final String COGNITO_POOL_ID = "ap-south-1:5806a377-205c-45fd-90f7-0d10f8177b1f";
+    private static final String COGNITO_POOL_ID = "ap-south-1:8fe24f45-9098-4be2-a048-8d5d96d58649";
     private static final Regions MY_REGION = Regions.AP_SOUTH_1;
     private AmazonDynamoDBClient dbClient;
     private Table dbTable_PJ;
     private Table dbTable_Vehicle;
     private Table dbTable_rfid_details;
+    private Table dbTable_route;
 
     private Context context;
     private final String DDB_PJ = "PLAN__JOURNEY";
     private final String DDB_V = "VEHICLE";
     private final String DDB_R = "RFID_BALANCE_TABLE";
+    private final String DDB_RT = "ROUTE";
 
     CognitoCachingCredentialsProvider credentialsProvider;
 
@@ -40,6 +42,7 @@ public class DatabaseAccess {
         dbTable_PJ = Table.loadTable(dbClient, DDB_PJ);
         dbTable_Vehicle = Table.loadTable(dbClient, DDB_V);
         dbTable_rfid_details=Table.loadTable(dbClient,DDB_R);
+        dbTable_route=Table.loadTable(dbClient,DDB_RT);
 
 
     }
@@ -85,7 +88,23 @@ public class DatabaseAccess {
         return result;
     }
 
+
+
     //*****************************************************DDB_R
+
+
+    //*****************************************************DDB_RT
+    public Document getItem_from_RT(String RouteID){
+        Document result = dbTable_route.getItem(new Primitive(RouteID));
+        return result;
+    }
+    public List<Document> getAllItems_from_RT(String RouteID) {
+
+        return dbTable_route.query(new Primitive(RouteID)).getAllResults();
+
+    }
+
+    //*****************************************************DDB_RT
 
 
 

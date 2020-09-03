@@ -103,20 +103,23 @@ public class BusBook extends AppCompatActivity implements DatePickerDialog.OnDat
         @Override
         protected ArrayList<BusList> doInBackground(String... params) {
 
-            Log.d("doInBackcount","count");
+
 
             DatabaseAccess databaseAccess = DatabaseAccess.getInstance(BusBook.this);
             Log.d("Data recieved", "databases content"+databaseAccess.getItem_from_PJ(from,to).toString());
+            Log.d("DatabaseAccess", databaseAccess.toString());
+
 
             Document DataRecieved_PJ=databaseAccess.getItem_from_PJ(from,to);
 
             String fare = DataRecieved_PJ.get("fare").convertToAttributeValue().getN();
             List<String> busIDs= DataRecieved_PJ.get("vehicle_ID").convertToAttributeValue().getSS();
-
+            String route = DataRecieved_PJ.get("route_id").convertToAttributeValue().getS();
 
             for(String busID : busIDs){
 
                 BusList BusDetails = new BusList();
+                Log.d("Data recievedhere", "busID"+busID);
 
                 Document DataRecieved_V=databaseAccess.getItem_from_V(busID);
                 String crowd= DataRecieved_V.get("Count_of_Travellers").convertToAttributeValue().getS();
@@ -124,6 +127,7 @@ public class BusBook extends AppCompatActivity implements DatePickerDialog.OnDat
                 BusDetails.setFare(fare);
                 BusDetails.setBus(busID);
                 BusDetails.setCrowd(crowd);
+                BusDetails.setRoute_ID(route);
 
                 mBuses.add(BusDetails);
 

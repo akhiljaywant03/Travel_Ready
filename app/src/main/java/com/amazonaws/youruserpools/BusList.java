@@ -18,10 +18,13 @@ public class BusList implements  Parcelable{
     //@ColumnInfo(name = "timestamp")
     private String fare;
 
-    public BusList(String Buses, String crowd, String fare) {
+    private String route_ID;
+
+    public BusList(String Buses, String crowd, String fare , String route_ID) {
         this.Bus = Buses;
         this.crowd = crowd;
         this.fare = fare;
+        this.route_ID = route_ID;
     }
 
 
@@ -34,6 +37,7 @@ public class BusList implements  Parcelable{
         Bus = in.readString();
         crowd = in.readString();
         fare = in.readString();
+        route_ID = in.readString();
     }
 
     public static final Creator<BusList> CREATOR = new Creator<BusList>() {
@@ -74,6 +78,15 @@ public class BusList implements  Parcelable{
 
 
 
+    public String getRoute_ID() {
+        return route_ID;
+    }
+
+    public void setRoute_ID(String route_ID) {
+        this.route_ID = route_ID;
+    }
+
+
 
     @Override
     public String toString() {
@@ -95,5 +108,7 @@ public class BusList implements  Parcelable{
         dest.writeString(Bus);
         dest.writeString(crowd);
         dest.writeString(fare);
+        dest.writeString(route_ID);
     }
+
 }
